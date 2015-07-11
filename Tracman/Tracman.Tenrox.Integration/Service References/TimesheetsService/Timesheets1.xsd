@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Tenrox.Server.Framework.Business.BusinessCore" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Tenrox.Server.Framework.Business.BusinessCore" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="ItemDirtyStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Clean" />
+      <xs:enumeration value="Update" />
+      <xs:enumeration value="IsNew" />
+      <xs:enumeration value="Deleted" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ItemDirtyStatus" nillable="true" type="tns:ItemDirtyStatus" />
+  <xs:simpleType name="QueryLevelType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="QueryEmpty" />
+      <xs:enumeration value="QueryBase" />
+      <xs:enumeration value="QueryCommon" />
+      <xs:enumeration value="QueryExtended" />
+      <xs:enumeration value="QueryKeys" />
+      <xs:enumeration value="QueryNull" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="QueryLevelType" nillable="true" type="tns:QueryLevelType" />
+</xs:schema>

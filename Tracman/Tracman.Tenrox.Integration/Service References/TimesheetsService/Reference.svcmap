@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1b207e14-7168-4adc-839a-ae2ca85f72f5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://intergen.tenrox.net/Twebservice/Timesheets.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Timesheets.xsd" MetadataType="Schema" ID="3915831d-2d88-4e98-98c4-5b726cd2ed56" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/Timesheets.svc?xsd=xsd3" />
+    <MetadataFile FileName="Timesheets1.xsd" MetadataType="Schema" ID="a48c969c-785f-4633-95ea-76bafb90d99f" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/Timesheets.svc?xsd=xsd4" />
+    <MetadataFile FileName="Timesheets.wsdl" MetadataType="Wsdl" ID="8fa77c13-b58a-4365-9f16-9e9978d5cc8f" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/Timesheets.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="Timesheets2.xsd" MetadataType="Schema" ID="8987e198-b5b9-4119-88ec-e57f71358535" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/Timesheets.svc?xsd=xsd5" />
+    <MetadataFile FileName="Timesheets1.wsdl" MetadataType="Wsdl" ID="bb5541f6-8cce-4f8d-87e5-28ce12862efe" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/Timesheets.svc?wsdl" />
+    <MetadataFile FileName="Timesheets3.xsd" MetadataType="Schema" ID="8164b18b-8ca9-46c8-abd3-fbda05301459" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/Timesheets.svc?xsd=xsd0" />
+    <MetadataFile FileName="Timesheets4.xsd" MetadataType="Schema" ID="83b9f836-7101-48ca-95ff-1c163903cbd7" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/Timesheets.svc?xsd=xsd1" />
+    <MetadataFile FileName="Timesheets5.xsd" MetadataType="Schema" ID="a4b16427-b666-4e47-82a4-a0a60fa3911a" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/Timesheets.svc?xsd=xsd2" />
+    <MetadataFile FileName="Timesheets.disco" MetadataType="Disco" ID="fadc9e86-8546-454e-8746-9766338d2a3f" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/Timesheets.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

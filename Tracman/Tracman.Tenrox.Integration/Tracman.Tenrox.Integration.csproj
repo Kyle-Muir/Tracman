@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{15320E1C-E93D-4B50-9E92-4B4B16C78C09}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tracman.Tenrox.Integration</RootNamespace>
+    <AssemblyName>Tracman.Tenrox.Integration</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tenrox.Shared.Utilities">
+      <HintPath>..\Integration\Tenrox\Tenrox.Shared.Utilities.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ITenroxAuthenticator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\TenroxLogonService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TimesheetsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="TenroxAuthenticator.cs" />
+    <Compile Include="TenroxGateway.cs" />
+    <Compile Include="TimeSheetBuilder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\Tenrox.Shared.Utilities.UserToken.datasource" />
+    <None Include="Service References\TenroxLogonService\LogonAs.wsdl" />
+    <None Include="Service References\TenroxLogonService\LogonAs.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TenroxLogonService\LogonAs1.wsdl" />
+    <None Include="Service References\TenroxLogonService\LogonAs1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TenroxLogonService\LogonAs2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TenroxLogonService\LogonAs3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TimesheetsService\Timesheets.wsdl" />
+    <None Include="Service References\TimesheetsService\Timesheets.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TimesheetsService\Timesheets1.wsdl" />
+    <None Include="Service References\TimesheetsService\Timesheets1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TimesheetsService\Timesheets2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TimesheetsService\Timesheets3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TimesheetsService\Timesheets4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TimesheetsService\Timesheets5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TimesheetsService\Tracman.Tenrox.Integration.TimesheetsService.Timesheets.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tracman.Core\Tracman.Core.csproj">
+      <Project>{D09DA497-634E-440D-B75E-6DC1008CC758}</Project>
+      <Name>Tracman.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\TenroxLogonService\" />
+    <WCFMetadataStorage Include="Service References\TimesheetsService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TenroxLogonService\LogonAs.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TenroxLogonService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TenroxLogonService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TenroxLogonService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TimesheetsService\Timesheets.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TimesheetsService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TimesheetsService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TimesheetsService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

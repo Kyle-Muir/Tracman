@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="Tenrox.Server.Framework.Business.ServiceContracts" elementFormDefault="qualified" targetNamespace="Tenrox.Server.Framework.Business.ServiceContracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://intergen.tenrox.net/TWebService/LogonAs.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Tenrox.Shared.Utilities" />
+  <xs:import schemaLocation="http://intergen.tenrox.net/TWebService/LogonAs.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:element name="AuthUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strOrgName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strUserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strIPAddress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_boolForceTenrox" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AuthUserResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthUserDesktop">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strOrgName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strUserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strIPAddress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_boolForceTenrox" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthUserDesktopResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AuthUserDesktopResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthUserMobile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strOrgName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strUserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strIPAddress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_boolForceTenrox" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthUserMobileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AuthUserMobileResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Authenticate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strOrgName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strUserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strIPAddress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_boolForceTenrox" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthenticateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Tenrox.Shared.Utilities" minOccurs="0" name="AuthenticateResult" nillable="true" type="q1:UserToken" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImpersonateUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strOrgName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strIPAddress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_boolForceTenrox" type="xs:boolean" />
+        <xs:element minOccurs="0" name="p_intIdToImpersonate" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImpersonateUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ImpersonateUserResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImpersonateUserToken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_intIdToImpersonate" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImpersonateUserTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ImpersonateUserTokenResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReinitializeToken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Tenrox.Shared.Utilities" minOccurs="0" name="p_userToken" nillable="true" type="q2:UserToken" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReinitializeTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReinitializeTokenResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Reinitialize">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strOrgname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strLogonName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="p_AuthenticationGuid" type="q3:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReinitializeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReinitializeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyUserInCache">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strOrgname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strLogonName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_AuthenticationGuid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyUserInCacheResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerifyUserInCacheResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bbf3d61e-eea4-4543-90ac-e0957ee7b9b7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://intergen.tenrox.net/Twebservice/logonas.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LogonAs.wsdl" MetadataType="Wsdl" ID="02d83cd1-27d0-4be8-9fca-727e9e6fb645" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/LogonAs.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="LogonAs1.wsdl" MetadataType="Wsdl" ID="a33e9021-7b9f-4aa7-8ecb-53eca2433281" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/LogonAs.svc?wsdl" />
+    <MetadataFile FileName="LogonAs.xsd" MetadataType="Schema" ID="550c568e-e181-4a24-9456-b59ef30adb06" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/LogonAs.svc?xsd=xsd0" />
+    <MetadataFile FileName="LogonAs1.xsd" MetadataType="Schema" ID="b36eb6ca-03ef-47a2-958f-114f8b5c7fea" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/LogonAs.svc?xsd=xsd3" />
+    <MetadataFile FileName="LogonAs2.xsd" MetadataType="Schema" ID="9adb6961-ed18-42e6-8548-041ec77f26a1" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/LogonAs.svc?xsd=xsd2" />
+    <MetadataFile FileName="LogonAs.disco" MetadataType="Disco" ID="04a22504-029a-458e-a07a-767817325083" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/LogonAs.svc?disco" />
+    <MetadataFile FileName="LogonAs3.xsd" MetadataType="Schema" ID="bc5484ed-babf-474e-8f54-0bfd56749dec" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/LogonAs.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://Tenrox.Server.Framework.WebServices.FaultContracts" elementFormDefault="qualified" targetNamespace="http://Tenrox.Server.Framework.WebServices.FaultContracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://intergen.tenrox.net/TWebService/LogonAs.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="LogonFaultContract">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TenroxFaultContract">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LogonFaultContract" nillable="true" type="tns:LogonFaultContract" />
+  <xs:complexType name="TenroxFaultContract">
+    <xs:sequence>
+      <xs:element name="ErrorId" type="xs:int" />
+      <xs:element name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element name="CorrelationId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TenroxFaultContract" nillable="true" type="tns:TenroxFaultContract" />
+</xs:schema>

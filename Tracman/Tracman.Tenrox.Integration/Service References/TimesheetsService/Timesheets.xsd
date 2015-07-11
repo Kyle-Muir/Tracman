@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Tenrox.Server.Framework.DataContracts" elementFormDefault="qualified" targetNamespace="http://Tenrox.Server.Framework.DataContracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://intergen.tenrox.net/TWebService/Timesheets.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Tenrox.Server.Framework.Business.BusinessCore" />
+  <xs:complexType name="Timesheets">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MyCompletedTimesheets" nillable="true" type="tns:ArrayOfCompletedTimesheet" />
+      <xs:element minOccurs="0" name="MyTimesheets" nillable="true" type="tns:ArrayOfTimesheet" />
+      <xs:element minOccurs="0" name="TotalCompletedTimesheets" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalNextTimesheets" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalPreviousTimesheets" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Timesheets" nillable="true" type="tns:Timesheets" />
+  <xs:complexType name="ArrayOfCompletedTimesheet">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CompletedTimesheet" nillable="true" type="tns:CompletedTimesheet" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCompletedTimesheet" nillable="true" type="tns:ArrayOfCompletedTimesheet" />
+  <xs:complexType name="CompletedTimesheet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DoubleOverTime" type="xs:decimal" />
+      <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+      <xs:element name="HasNotes" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LeaveTime" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OverTime" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RegTime" type="xs:decimal" />
+      <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TimesheetTransitions" nillable="true" type="tns:ArrayOfTimesheetTransition" />
+      <xs:element minOccurs="0" name="TimesheetUId" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalTime" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserUId" type="xs:int" />
+      <xs:element minOccurs="0" name="WORKFUID" type="xs:int" />
+      <xs:element minOccurs="0" name="WorkflowActivityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WorkflowInstanceGuid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompletedTimesheet" nillable="true" type="tns:CompletedTimesheet" />
+  <xs:complexType name="ArrayOfTimesheetTransition">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TimesheetTransition" nillable="true" type="tns:TimesheetTransition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTimesheetTransition" nillable="true" type="tns:ArrayOfTimesheetTransition" />
+  <xs:complexType name="TimesheetTransition">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActivityAssUniqueID" type="xs:int" />
+      <xs:element minOccurs="0" name="GUID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsApproval" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsComplete" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsFinal" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsInitial" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsMultiPMapp" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsReadOnly" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsRejected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsValidWork" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UniqueID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TimesheetTransition" nillable="true" type="tns:TimesheetTransition" />
+  <xs:complexType name="ArrayOfTimesheet">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Timesheet" nillable="true" type="tns:Timesheet" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTimesheet" nillable="true" type="tns:ArrayOfTimesheet" />
+  <xs:complexType name="Timesheet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActiveSiteUid" type="xs:int" />
+      <xs:element minOccurs="0" name="ActivityGUID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AllowEntryInTheAdvance" type="xs:int" />
+      <xs:element minOccurs="0" name="AllowEntryInTheAdvanceType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AllowEntryInThePast" type="xs:int" />
+      <xs:element minOccurs="0" name="AllowEntryInThePastType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BankedOverTime" type="xs:int" />
+      <xs:element minOccurs="0" name="CanManagerModifyBillable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CanManagerModifyPayable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DefaultClientUid" type="xs:int" />
+      <xs:element minOccurs="0" name="DefaultProjectUid" type="xs:int" />
+      <xs:element minOccurs="0" name="DefaultWorkTypeUid" type="xs:int" />
+      <xs:element name="Details" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmployeeType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FunctionalGroupUid" type="xs:int" />
+      <xs:element minOccurs="0" name="FunctionalManagerUid" type="xs:int" />
+      <xs:element minOccurs="0" name="HasAssignments" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HasErrors" type="xs:boolean" />
+      <xs:element name="HasNotes" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HasTimeentries" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HireDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsTimesheetClosed" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LeaveTimes" nillable="true" type="tns:ArrayOfTaskLeaveTime" />
+      <xs:element minOccurs="0" name="LockedDates" nillable="true" type="tns:ArrayOfTimesheetLockedDates" />
+      <xs:element minOccurs="0" name="MasterSiteUid" type="xs:int" />
+      <xs:element minOccurs="0" name="PeriodClosed" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PersonalDayTime" type="xs:int" />
+      <xs:element minOccurs="0" name="ResourceType" type="xs:int" />
+      <xs:element minOccurs="0" name="RoleObjectType" type="xs:int" />
+      <xs:element minOccurs="0" name="ShowAdjustmentsSection" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ShowAssignmentsSection" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ShowLeaveTimeSection" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ShowNonWorkingTimeSection" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SickLeaveTime" type="xs:int" />
+      <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TemplateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TemplateUid" type="xs:int" />
+      <xs:element minOccurs="0" name="TerminatedDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TimeIncrement" type="xs:int" />
+      <xs:element name="TimesheetAssignmentAttributes" nillable="true" type="tns:ArrayOfAssignmentAttribute" />
+      <xs:element minOccurs="0" name="TimesheetColumns" nillable="true" type="xs:string" />
+      <xs:element name="TimesheetEntries" nillable="true" type="tns:ArrayOfTimesheetEntry" />
+      <xs:element minOccurs="0" name="TimesheetErrors" nillable="true" type="tns:ArrayOfTimesheetError" />
+      <xs:element minOccurs="0" name="TimesheetNotes" nillable="true" type="tns:ArrayOfTimesheetNote" />
+      <xs:element minOccurs="0" name="TimesheetStates" nillable="true" type="tns:ArrayOfTimesheetState" />
+      <xs:element minOccurs="0" name="TimesheetTransitions" nillable="true" type="tns:ArrayOfTimesheetTransition" />
+      <xs:element minOccurs="0" name="TotalPeriodOverTime" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalPeriodPayableTime" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalPeriodRegTime" type="xs:int" />
+      <xs:element minOccurs="0" name="UniqueId" type="xs:int" />
+      <xs:element minOccurs="0" name="UserAccessStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="UserFirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserLastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserUID" type="xs:int" />
+      <xs:element minOccurs="0" name="UsersAccessStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="VacationTime" type="xs:int" />
+      <xs:element minOccurs="0" name="WorkflowGUID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Timesheet" nillable="true" type="tns:Timesheet" />
+  <xs:complexType name="ArrayOfTaskLeaveTime">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TaskLeaveTime" nillable="true" type="tns:TaskLeaveTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTaskLeaveTime" nillable="true" type="tns:ArrayOfTaskLeaveTime" />
+  <xs:complexType name="TaskLeaveTime">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Item">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="WorkTypeId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TaskLeaveTime" nillable="true" type="tns:TaskLeaveTime" />
+  <xs:complexType name="Item">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Tenrox.Server.Framework.Business.BusinessCore" minOccurs="0" name="DirtyStatus" type="q1:ItemDirtyStatus" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Tenrox.Server.Framework.Business.BusinessCore" minOccurs="0" name="QueryLevel" type="q2:QueryLevelType" />
+      <xs:element minOccurs="0" name="UniqueId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Item" nillable="true" type="tns:Item" />
+  <xs:complexType name="ArrayOfTimesheetLockedDates">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TimesheetLockedDates" nillable="true" type="tns:TimesheetLockedDates" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTimesheetLockedDates" nillable="true" type="tns:ArrayOfTimesheetLockedDates" />
+  <xs:complexType name="TimesheetLockedDates">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateLocked" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsDateLocked" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TimesheetLockedDates" nillable="true" type="tns:TimesheetLockedDates" />
+  <xs:complexType name="ArrayOfAssignmentAttribute">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AssignmentAttribute" nillable="true" type="tns:AssignmentAttribute" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAssignmentAttribute" nillable="true" type="tns:ArrayOfAssignmentAttribute" />
+  <xs:complexType name="AssignmentAttribute">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccessType" type="xs:int" />
+      <xs:element minOccurs="0" name="AssignmentComp" type="xs:int" />
+      <xs:element minOccurs="0" name="AssignmentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AssignmentUid" type="xs:int" />
+      <xs:element minOccurs="0" name="BusinessUnitName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BusinessUnitUid" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ChargeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChargeUid" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ClientName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClientUid" type="xs:int" />
+      <xs:element minOccurs="0" name="ComponentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ComponentUid" nillable="true" type="xs:int" />
+      <xs:element name="Dirty" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ETC" type="xs:int" />
+      <xs:element name="ETCChanged" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HasTimeEntry" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsBillable" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsCustom" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDefault" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsETCEditable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsFunded" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNonWorkingTime" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsPayable" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsRandD" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ManagerUid" type="xs:int" />
+      <xs:element minOccurs="0" name="PercentComplete" type="xs:int" />
+      <xs:element minOccurs="0" name="PhaseName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhaseUid" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PortfolioName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PortfolioUid" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductUid" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ProjectName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProjectUid" type="xs:int" />
+      <xs:element minOccurs="0" name="ShowETC" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SiteName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SiteUid" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaskName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaskUid" type="xs:int" />
+      <xs:element minOccurs="0" name="TeamName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TeamUid" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TemplateUid" type="xs:int" />
+      <xs:element minOccurs="0" name="TitleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TitleUid" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="UniqueID" type="xs:int" />
+      <xs:element minOccurs="0" name="UserGroupName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserGroupUid" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="UserUid" type="xs:int" />
+      <xs:element minOccurs="0" name="WorkTypeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WorkTypeUid" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AssignmentAttribute" nillable="true" type="tns:AssignmentAttribute" />
+  <xs:complexType name="ArrayOfTimesheetEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TimesheetEntry" nillable="true" type="tns:TimesheetEntry" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTimesheetEntry" nillable="true" type="tns:ArrayOfTimesheetEntry" />
+  <xs:complexType name="TimesheetEntry">
+    <xs:sequence>
+      <xs:element name="Approved" type="xs:boolean" />
+      <xs:element name="AssignmentAttributeUid" type="xs:int" />
+      <xs:element name="AssignmentUid" type="xs:int" />
+      <xs:element name="BUnitUid" type="xs:int" />
+      <xs:element name="Billed" type="xs:boolean" />
+      <xs:element name="ChargeUid" type="xs:int" />
+      <xs:element name="CreatedByUid" type="xs:int" />
+      <xs:element name="CreationDate" nillable="true" type="xs:string" />
+      <xs:element name="DoubleOvertime" type="xs:int" />
+      <xs:element name="EntryDate" nillable="true" type="xs:string" />
+      <xs:element name="EntryState" type="xs:int" />
+      <xs:element name="HasNotes" type="xs:boolean" />
+      <xs:element name="IsBillable" type="xs:boolean" />
+      <xs:element name="IsCustom" type="xs:boolean" />
+      <xs:element name="IsDirty" type="xs:boolean" />
+      <xs:element name="IsFunded" type="xs:boolean" />
+      <xs:element name="IsNonWorking" type="xs:boolean" />
+      <xs:element name="IsPayable" type="xs:boolean" />
+      <xs:element name="IsRandD" type="xs:boolean" />
+      <xs:element name="Overtime" type="xs:int" />
+      <xs:element name="PhaseUid" type="xs:int" />
+      <xs:element name="Posted" type="xs:boolean" />
+      <xs:element name="RegularTime" type="xs:int" />
+      <xs:element name="Rejected" type="xs:boolean" />
+      <xs:element name="SiteName" nillable="true" type="xs:string" />
+      <xs:element name="SiteUid" type="xs:int" />
+      <xs:element name="TaskUid" type="xs:int" />
+      <xs:element name="TimeEntryNotes" nillable="true" type="tns:ArrayOfTimesheetNote" />
+      <xs:element name="TimesheetUid" type="xs:int" />
+      <xs:element name="TotalTime" type="xs:int" />
+      <xs:element name="UniqueID" type="xs:int" />
+      <xs:element name="UpdateDate" nillable="true" type="xs:string" />
+      <xs:element name="UpdatedByUid" type="xs:int" />
+      <xs:element name="UserUid" type="xs:int" />
+      <xs:element name="hasError" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TimesheetEntry" nillable="true" type="tns:TimesheetEntry" />
+  <xs:complexType name="ArrayOfTimesheetNote">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TimesheetNote" nillable="true" type="tns:TimesheetNote" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTimesheetNote" nillable="true" type="tns:ArrayOfTimesheetNote" />
+  <xs:complexType name="TimesheetNote">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsPublic" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NoteType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UniqueID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TimesheetNote" nillable="true" type="tns:TimesheetNote" />
+  <xs:complexType name="ArrayOfTimesheetError">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TimesheetError" nillable="true" type="tns:TimesheetError" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTimesheetError" nillable="true" type="tns:ArrayOfTimesheetError" />
+  <xs:complexType name="TimesheetError">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FailedItem" nillable="true" type="tns:TimesheetEntry" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TimesheetError" nillable="true" type="tns:TimesheetError" />
+  <xs:complexType name="ArrayOfTimesheetState">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TimesheetState" nillable="true" type="tns:TimesheetState" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTimesheetState" nillable="true" type="tns:ArrayOfTimesheetState" />
+  <xs:complexType name="TimesheetState">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActivityGUID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsApproval" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsCompleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsFinal" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsReadOnly" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsRejected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TimesheetState" nillable="true" type="tns:TimesheetState" />
+</xs:schema>

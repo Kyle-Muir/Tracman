@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="Tenrox.Server.Framework.Business.ServiceContracts" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="Tenrox.Server.Framework.Business.ServiceContracts" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="Tenrox.Server.Framework.Business.ServiceContracts/Imports">
+      <xsd:import schemaLocation="http://intergen.tenrox.net/TWebService/Timesheets.svc?xsd=xsd0" namespace="Tenrox.Server.Framework.Business.ServiceContracts" />
+      <xsd:import schemaLocation="http://intergen.tenrox.net/TWebService/Timesheets.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://intergen.tenrox.net/TWebService/Timesheets.svc?xsd=xsd5" namespace="http://Tenrox.Server.Framework.WebServices.FaultContracts" />
+      <xsd:import schemaLocation="http://intergen.tenrox.net/TWebService/Timesheets.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Tenrox.Shared.Utilities" />
+      <xsd:import schemaLocation="http://intergen.tenrox.net/TWebService/Timesheets.svc?xsd=xsd3" namespace="http://Tenrox.Server.Framework.DataContracts" />
+      <xsd:import schemaLocation="http://intergen.tenrox.net/TWebService/Timesheets.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Tenrox.Server.Framework.Business.BusinessCore" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITimesheets_QueryByUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryByUser" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_QueryByUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_QueryByUserDateRange_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryByUserDateRange" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_QueryByUserDateRange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryByUserDateRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_QueryByUserPeriodRange_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryByUserPeriodRange" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_QueryByUserPeriodRange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryByUserPeriodRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_QueryByUserTyped_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryByUserTyped" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_QueryByUserTyped_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryByUserTypedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_QueryByUserTyped_TenroxFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://Tenrox.Server.Framework.WebServices.FaultContracts" name="detail" element="q1:TenroxFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_QueryByUserDateRangeTyped_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryByUserDateRangeTyped" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_QueryByUserDateRangeTyped_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryByUserDateRangeTypedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_QueryByUserDateRangeTyped_TenroxFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://Tenrox.Server.Framework.WebServices.FaultContracts" name="detail" element="q2:TenroxFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_QueryByUserPeriodRangeTyped_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryByUserPeriodRangeTyped" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_QueryByUserPeriodRangeTyped_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryByUserPeriodRangeTypedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_QueryByUserPeriodRangeTyped_TenroxFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://Tenrox.Server.Framework.WebServices.FaultContracts" name="detail" element="q3:TenroxFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_SaveXML_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveXML" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_SaveXML_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_SaveXML_TenroxFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://Tenrox.Server.Framework.WebServices.FaultContracts" name="detail" element="q4:TenroxFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_SaveXMLAndTransition_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveXMLAndTransition" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_SaveXMLAndTransition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveXMLAndTransitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_SaveXMLAndTransition_TenroxFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://Tenrox.Server.Framework.WebServices.FaultContracts" name="detail" element="q5:TenroxFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_Save_InputMessage">
+    <wsdl:part name="parameters" element="tns:Save" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_Save_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_Save_TenroxFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://Tenrox.Server.Framework.WebServices.FaultContracts" name="detail" element="q6:TenroxFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_SaveTimesheets_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTimesheets" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_SaveTimesheets_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTimesheetsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_SaveTimesheets_TenroxFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://Tenrox.Server.Framework.WebServices.FaultContracts" name="detail" element="q7:TenroxFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_SaveAndTransition_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAndTransition" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_SaveAndTransition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAndTransitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_SaveAndTransition_TenroxFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://Tenrox.Server.Framework.WebServices.FaultContracts" name="detail" element="q8:TenroxFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_QueryCompletedTimesheetsByUserTyped_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryCompletedTimesheetsByUserTyped" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_QueryCompletedTimesheetsByUserTyped_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryCompletedTimesheetsByUserTypedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_QueryCompletedTimesheetsByUserTyped_TenroxFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://Tenrox.Server.Framework.WebServices.FaultContracts" name="detail" element="q9:TenroxFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_QueryCompletedTimesheetsByUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryCompletedTimesheetsByUser" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_QueryCompletedTimesheetsByUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryCompletedTimesheetsByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_QueryCompletedTimesheetsByUser_TenroxFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://Tenrox.Server.Framework.WebServices.FaultContracts" name="detail" element="q10:TenroxFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_QueryTimesheetsDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryTimesheetsDetails" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_QueryTimesheetsDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryTimesheetsDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_QueryTimesheetsDetails_TenroxFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://Tenrox.Server.Framework.WebServices.FaultContracts" name="detail" element="q11:TenroxFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_QueryTimesheetsDetailsTyped_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryTimesheetsDetailsTyped" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_QueryTimesheetsDetailsTyped_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryTimesheetsDetailsTypedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_QueryTimesheetsDetailsTyped_TenroxFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://Tenrox.Server.Framework.WebServices.FaultContracts" name="detail" element="q12:TenroxFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_ExecuteTransition_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteTransition" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_ExecuteTransition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteTransitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_ExecuteTransition_TenroxFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://Tenrox.Server.Framework.WebServices.FaultContracts" name="detail" element="q13:TenroxFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_ExecuteTransitions_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteTransitions" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_ExecuteTransitions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteTransitionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_ExecuteTransitions_TenroxFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://Tenrox.Server.Framework.WebServices.FaultContracts" name="detail" element="q14:TenroxFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_ExecuteTransitionsTyped_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteTransitionsTyped" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_ExecuteTransitionsTyped_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteTransitionsTypedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimesheets_ExecuteTransitionsTyped_TenroxFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://Tenrox.Server.Framework.WebServices.FaultContracts" name="detail" element="q15:TenroxFaultContract" />
+  </wsdl:message>
+  <wsdl:portType name="ITimesheets">
+    <wsdl:operation name="QueryByUser">
+      <wsdl:input wsaw:Action="QueryByUser" message="tns:ITimesheets_QueryByUser_InputMessage" />
+      <wsdl:output wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/QueryByUserResponse" message="tns:ITimesheets_QueryByUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryByUserDateRange">
+      <wsdl:input wsaw:Action="QueryByUserDateRange" message="tns:ITimesheets_QueryByUserDateRange_InputMessage" />
+      <wsdl:output wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/QueryByUserDateRangeResponse" message="tns:ITimesheets_QueryByUserDateRange_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryByUserPeriodRange">
+      <wsdl:input wsaw:Action="QueryByUserPeriodRange" message="tns:ITimesheets_QueryByUserPeriodRange_InputMessage" />
+      <wsdl:output wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/QueryByUserPeriodRangeResponse" message="tns:ITimesheets_QueryByUserPeriodRange_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryByUserTyped">
+      <wsdl:input wsaw:Action="QueryByUserTyped" message="tns:ITimesheets_QueryByUserTyped_InputMessage" />
+      <wsdl:output wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/QueryByUserTypedResponse" message="tns:ITimesheets_QueryByUserTyped_OutputMessage" />
+      <wsdl:fault wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/QueryByUserTypedTenroxFaultContractFault" name="TenroxFaultContractFault" message="tns:ITimesheets_QueryByUserTyped_TenroxFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryByUserDateRangeTyped">
+      <wsdl:input wsaw:Action="QueryByUserDateRangeTyped" message="tns:ITimesheets_QueryByUserDateRangeTyped_InputMessage" />
+      <wsdl:output wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/QueryByUserDateRangeTypedResponse" message="tns:ITimesheets_QueryByUserDateRangeTyped_OutputMessage" />
+      <wsdl:fault wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/QueryByUserDateRangeTypedTenroxFaultContractFault" name="TenroxFaultContractFault" message="tns:ITimesheets_QueryByUserDateRangeTyped_TenroxFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryByUserPeriodRangeTyped">
+      <wsdl:input wsaw:Action="QueryByUserPeriodRangeTyped" message="tns:ITimesheets_QueryByUserPeriodRangeTyped_InputMessage" />
+      <wsdl:output wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/QueryByUserPeriodRangeTypedResponse" message="tns:ITimesheets_QueryByUserPeriodRangeTyped_OutputMessage" />
+      <wsdl:fault wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/QueryByUserPeriodRangeTypedTenroxFaultContractFault" name="TenroxFaultContractFault" message="tns:ITimesheets_QueryByUserPeriodRangeTyped_TenroxFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveXML">
+      <wsdl:input wsaw:Action="SaveXML" message="tns:ITimesheets_SaveXML_InputMessage" />
+      <wsdl:output wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/SaveXMLResponse" message="tns:ITimesheets_SaveXML_OutputMessage" />
+      <wsdl:fault wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/SaveXMLTenroxFaultContractFault" name="TenroxFaultContractFault" message="tns:ITimesheets_SaveXML_TenroxFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveXMLAndTransition">
+      <wsdl:input wsaw:Action="SaveXMLAndTransition" message="tns:ITimesheets_SaveXMLAndTransition_InputMessage" />
+      <wsdl:output wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/SaveXMLAndTransitionResponse" message="tns:ITimesheets_SaveXMLAndTransition_OutputMessage" />
+      <wsdl:fault wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/SaveXMLAndTransitionTenroxFaultContractFault" name="TenroxFaultContractFault" message="tns:ITimesheets_SaveXMLAndTransition_TenroxFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Save">
+      <wsdl:input wsaw:Action="Save" message="tns:ITimesheets_Save_InputMessage" />
+      <wsdl:output wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/SaveResponse" message="tns:ITimesheets_Save_OutputMessage" />
+      <wsdl:fault wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/SaveTenroxFaultContractFault" name="TenroxFaultContractFault" message="tns:ITimesheets_Save_TenroxFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTimesheets">
+      <wsdl:input wsaw:Action="SaveTimesheets" message="tns:ITimesheets_SaveTimesheets_InputMessage" />
+      <wsdl:output wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/SaveTimesheetsResponse" message="tns:ITimesheets_SaveTimesheets_OutputMessage" />
+      <wsdl:fault wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/SaveTimesheetsTenroxFaultContractFault" name="TenroxFaultContractFault" message="tns:ITimesheets_SaveTimesheets_TenroxFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAndTransition">
+      <wsdl:input wsaw:Action="SaveAndTransition" message="tns:ITimesheets_SaveAndTransition_InputMessage" />
+      <wsdl:output wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/SaveAndTransitionResponse" message="tns:ITimesheets_SaveAndTransition_OutputMessage" />
+      <wsdl:fault wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/SaveAndTransitionTenroxFaultContractFault" name="TenroxFaultContractFault" message="tns:ITimesheets_SaveAndTransition_TenroxFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryCompletedTimesheetsByUserTyped">
+      <wsdl:input wsaw:Action="QueryCompletedTimesheetsByUserTyped" message="tns:ITimesheets_QueryCompletedTimesheetsByUserTyped_InputMessage" />
+      <wsdl:output wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/QueryCompletedTimesheetsByUserTypedResponse" message="tns:ITimesheets_QueryCompletedTimesheetsByUserTyped_OutputMessage" />
+      <wsdl:fault wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/QueryCompletedTimesheetsByUserTypedTenroxFaultContractFault" name="TenroxFaultContractFault" message="tns:ITimesheets_QueryCompletedTimesheetsByUserTyped_TenroxFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryCompletedTimesheetsByUser">
+      <wsdl:input wsaw:Action="QueryCompletedTimesheetsByUser" message="tns:ITimesheets_QueryCompletedTimesheetsByUser_InputMessage" />
+      <wsdl:output wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/QueryCompletedTimesheetsByUserResponse" message="tns:ITimesheets_QueryCompletedTimesheetsByUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/QueryCompletedTimesheetsByUserTenroxFaultContractFault" name="TenroxFaultContractFault" message="tns:ITimesheets_QueryCompletedTimesheetsByUser_TenroxFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryTimesheetsDetails">
+      <wsdl:input wsaw:Action="QueryTimesheetsDetails" message="tns:ITimesheets_QueryTimesheetsDetails_InputMessage" />
+      <wsdl:output wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/QueryTimesheetsDetailsResponse" message="tns:ITimesheets_QueryTimesheetsDetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/QueryTimesheetsDetailsTenroxFaultContractFault" name="TenroxFaultContractFault" message="tns:ITimesheets_QueryTimesheetsDetails_TenroxFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryTimesheetsDetailsTyped">
+      <wsdl:input wsaw:Action="QueryTimesheetsDetailsTyped" message="tns:ITimesheets_QueryTimesheetsDetailsTyped_InputMessage" />
+      <wsdl:output wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/QueryTimesheetsDetailsTypedResponse" message="tns:ITimesheets_QueryTimesheetsDetailsTyped_OutputMessage" />
+      <wsdl:fault wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/QueryTimesheetsDetailsTypedTenroxFaultContractFault" name="TenroxFaultContractFault" message="tns:ITimesheets_QueryTimesheetsDetailsTyped_TenroxFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteTransition">
+      <wsdl:input wsaw:Action="ExecuteTransition" message="tns:ITimesheets_ExecuteTransition_InputMessage" />
+      <wsdl:output wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/ExecuteTransitionResponse" message="tns:ITimesheets_ExecuteTransition_OutputMessage" />
+      <wsdl:fault wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/ExecuteTransitionTenroxFaultContractFault" name="TenroxFaultContractFault" message="tns:ITimesheets_ExecuteTransition_TenroxFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteTransitions">
+      <wsdl:input wsaw:Action="ExecuteTransitions" message="tns:ITimesheets_ExecuteTransitions_InputMessage" />
+      <wsdl:output wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/ExecuteTransitionsResponse" message="tns:ITimesheets_ExecuteTransitions_OutputMessage" />
+      <wsdl:fault wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/ExecuteTransitionsTenroxFaultContractFault" name="TenroxFaultContractFault" message="tns:ITimesheets_ExecuteTransitions_TenroxFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteTransitionsTyped">
+      <wsdl:input wsaw:Action="ExecuteTransitionsTyped" message="tns:ITimesheets_ExecuteTransitionsTyped_InputMessage" />
+      <wsdl:output wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/ExecuteTransitionsTypedResponse" message="tns:ITimesheets_ExecuteTransitionsTyped_OutputMessage" />
+      <wsdl:fault wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ITimesheets/ExecuteTransitionsTypedTenroxFaultContractFault" name="TenroxFaultContractFault" message="tns:ITimesheets_ExecuteTransitionsTyped_TenroxFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

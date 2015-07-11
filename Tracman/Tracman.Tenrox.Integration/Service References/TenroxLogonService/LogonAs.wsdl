@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="Tenrox.Server.Framework.Business.ServiceContracts" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="Tenrox.Server.Framework.Business.ServiceContracts" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="Tenrox.Server.Framework.Business.ServiceContracts/Imports">
+      <xsd:import schemaLocation="http://intergen.tenrox.net/TWebService/LogonAs.svc?xsd=xsd0" namespace="Tenrox.Server.Framework.Business.ServiceContracts" />
+      <xsd:import schemaLocation="http://intergen.tenrox.net/TWebService/LogonAs.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://intergen.tenrox.net/TWebService/LogonAs.svc?xsd=xsd3" namespace="http://Tenrox.Server.Framework.WebServices.FaultContracts" />
+      <xsd:import schemaLocation="http://intergen.tenrox.net/TWebService/LogonAs.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Tenrox.Shared.Utilities" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ILogonAs_AuthUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="ILogonAs_AuthUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILogonAs_AuthUserDesktop_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthUserDesktop" />
+  </wsdl:message>
+  <wsdl:message name="ILogonAs_AuthUserDesktop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthUserDesktopResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILogonAs_AuthUserMobile_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthUserMobile" />
+  </wsdl:message>
+  <wsdl:message name="ILogonAs_AuthUserMobile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthUserMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILogonAs_Authenticate_InputMessage">
+    <wsdl:part name="parameters" element="tns:Authenticate" />
+  </wsdl:message>
+  <wsdl:message name="ILogonAs_Authenticate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILogonAs_Authenticate_LogonFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://Tenrox.Server.Framework.WebServices.FaultContracts" name="detail" element="q1:LogonFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="ILogonAs_ImpersonateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImpersonateUser" />
+  </wsdl:message>
+  <wsdl:message name="ILogonAs_ImpersonateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImpersonateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILogonAs_ImpersonateUserToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImpersonateUserToken" />
+  </wsdl:message>
+  <wsdl:message name="ILogonAs_ImpersonateUserToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImpersonateUserTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILogonAs_ReinitializeToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReinitializeToken" />
+  </wsdl:message>
+  <wsdl:message name="ILogonAs_ReinitializeToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReinitializeTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILogonAs_Reinitialize_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reinitialize" />
+  </wsdl:message>
+  <wsdl:message name="ILogonAs_Reinitialize_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReinitializeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILogonAs_VerifyUserInCache_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyUserInCache" />
+  </wsdl:message>
+  <wsdl:message name="ILogonAs_VerifyUserInCache_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyUserInCacheResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ILogonAs">
+    <wsdl:operation name="AuthUser">
+      <wsdl:input wsaw:Action="LogonAs" message="tns:ILogonAs_AuthUser_InputMessage" />
+      <wsdl:output wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ILogonAs/AuthUserResponse" message="tns:ILogonAs_AuthUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthUserDesktop">
+      <wsdl:input wsaw:Action="LogonAsDesktop" message="tns:ILogonAs_AuthUserDesktop_InputMessage" />
+      <wsdl:output wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ILogonAs/AuthUserDesktopResponse" message="tns:ILogonAs_AuthUserDesktop_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthUserMobile">
+      <wsdl:input wsaw:Action="LogonAsMobile" message="tns:ILogonAs_AuthUserMobile_InputMessage" />
+      <wsdl:output wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ILogonAs/AuthUserMobileResponse" message="tns:ILogonAs_AuthUserMobile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Authenticate">
+      <wsdl:input wsaw:Action="Authenticate" message="tns:ILogonAs_Authenticate_InputMessage" />
+      <wsdl:output wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ILogonAs/AuthenticateResponse" message="tns:ILogonAs_Authenticate_OutputMessage" />
+      <wsdl:fault wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ILogonAs/AuthenticateLogonFaultContractFault" name="LogonFaultContractFault" message="tns:ILogonAs_Authenticate_LogonFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImpersonateUser">
+      <wsdl:input wsaw:Action="ImpersonateUser" message="tns:ILogonAs_ImpersonateUser_InputMessage" />
+      <wsdl:output wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ILogonAs/ImpersonateUserResponse" message="tns:ILogonAs_ImpersonateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImpersonateUserToken">
+      <wsdl:input wsaw:Action="ImpersonateUserToken" message="tns:ILogonAs_ImpersonateUserToken_InputMessage" />
+      <wsdl:output wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ILogonAs/ImpersonateUserTokenResponse" message="tns:ILogonAs_ImpersonateUserToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReinitializeToken">
+      <wsdl:input wsaw:Action="ReinitializeToken" message="tns:ILogonAs_ReinitializeToken_InputMessage" />
+      <wsdl:output wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ILogonAs/ReinitializeTokenResponse" message="tns:ILogonAs_ReinitializeToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Reinitialize">
+      <wsdl:input wsaw:Action="Reinitialize" message="tns:ILogonAs_Reinitialize_InputMessage" />
+      <wsdl:output wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ILogonAs/ReinitializeResponse" message="tns:ILogonAs_Reinitialize_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyUserInCache">
+      <wsdl:input wsaw:Action="VerifyUserInCache" message="tns:ILogonAs_VerifyUserInCache_InputMessage" />
+      <wsdl:output wsaw:Action="Tenrox.Server.Framework.Business.ServiceContracts/ILogonAs/VerifyUserInCacheResponse" message="tns:ILogonAs_VerifyUserInCache_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

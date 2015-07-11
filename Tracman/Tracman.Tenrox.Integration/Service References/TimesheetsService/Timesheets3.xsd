@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="Tenrox.Server.Framework.Business.ServiceContracts" elementFormDefault="qualified" targetNamespace="Tenrox.Server.Framework.Business.ServiceContracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://intergen.tenrox.net/TWebService/Timesheets.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Tenrox.Shared.Utilities" />
+  <xs:import schemaLocation="http://intergen.tenrox.net/TWebService/Timesheets.svc?xsd=xsd3" namespace="http://Tenrox.Server.Framework.DataContracts" />
+  <xs:element name="QueryByUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_UserToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_iUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="p_dtAnyDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_iRoleObjectType" type="xs:int" />
+        <xs:element minOccurs="0" name="p_strActivityname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strComingFrom" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryByUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueryByUserResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryByUserDateRange">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_UserToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_iUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="p_dtStartDateRange" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_dtEndDateRange" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_iRoleObjectType" type="xs:int" />
+        <xs:element minOccurs="0" name="p_strActivityname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strComingFrom" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryByUserDateRangeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueryByUserDateRangeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryByUserPeriodRange">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_UserToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_iUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="p_dtAnyDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_iTimesheetsBefore" type="xs:int" />
+        <xs:element minOccurs="0" name="p_iTimesheetsAfter" type="xs:int" />
+        <xs:element minOccurs="0" name="p_iRoleObjectType" type="xs:int" />
+        <xs:element minOccurs="0" name="p_strActivityname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strComingFrom" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryByUserPeriodRangeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueryByUserPeriodRangeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryByUserTyped">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Tenrox.Shared.Utilities" minOccurs="0" name="p_UserToken" nillable="true" type="q1:UserToken" />
+        <xs:element minOccurs="0" name="p_iUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="p_dtAnyDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_iRoleObjectType" type="xs:int" />
+        <xs:element minOccurs="0" name="p_strActivityname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strComingFrom" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryByUserTypedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://Tenrox.Server.Framework.DataContracts" minOccurs="0" name="QueryByUserTypedResult" nillable="true" type="q2:Timesheets" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryByUserDateRangeTyped">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Tenrox.Shared.Utilities" minOccurs="0" name="p_UserToken" nillable="true" type="q3:UserToken" />
+        <xs:element minOccurs="0" name="p_iUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="p_dtStartDateRange" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_dtEndDateRange" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_iRoleObjectType" type="xs:int" />
+        <xs:element minOccurs="0" name="p_strActivityname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strComingFrom" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryByUserDateRangeTypedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://Tenrox.Server.Framework.DataContracts" minOccurs="0" name="QueryByUserDateRangeTypedResult" nillable="true" type="q4:Timesheets" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryByUserPeriodRangeTyped">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Tenrox.Shared.Utilities" minOccurs="0" name="p_UserToken" nillable="true" type="q5:UserToken" />
+        <xs:element minOccurs="0" name="p_iUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="p_dtAnyDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_iTimesheetsBefore" type="xs:int" />
+        <xs:element minOccurs="0" name="p_iTimesheetsAfter" type="xs:int" />
+        <xs:element minOccurs="0" name="p_iRoleObjectType" type="xs:int" />
+        <xs:element minOccurs="0" name="p_strActivityname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strComingFrom" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryByUserPeriodRangeTypedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://Tenrox.Server.Framework.DataContracts" minOccurs="0" name="QueryByUserPeriodRangeTypedResult" nillable="true" type="q6:Timesheets" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveXML">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_UserToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_intUserUId" type="xs:int" />
+        <xs:element minOccurs="0" name="p_timesheets" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveXMLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveXMLResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveXMLAndTransition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_UserToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_intUserUId" type="xs:int" />
+        <xs:element minOccurs="0" name="p_timesheets" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_intTimesheetToTransition" type="xs:int" />
+        <xs:element minOccurs="0" name="p_intToTransition" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveXMLAndTransitionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveXMLAndTransitionResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Save">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Tenrox.Shared.Utilities" minOccurs="0" name="p_UserToken" nillable="true" type="q7:UserToken" />
+        <xs:element minOccurs="0" name="p_intUserUId" type="xs:int" />
+        <xs:element xmlns:q8="http://Tenrox.Server.Framework.DataContracts" minOccurs="0" name="p_timesheets" nillable="true" type="q8:Timesheets" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://Tenrox.Server.Framework.DataContracts" minOccurs="0" name="SaveResult" nillable="true" type="q9:Timesheets" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveTimesheets">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Tenrox.Shared.Utilities" minOccurs="0" name="p_UserToken" nillable="true" type="q10:UserToken" />
+        <xs:element minOccurs="0" name="p_intUserUId" type="xs:int" />
+        <xs:element xmlns:q11="http://Tenrox.Server.Framework.DataContracts" minOccurs="0" name="p_timesheets" nillable="true" type="q11:Timesheets" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveTimesheetsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveTimesheetsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAndTransition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Tenrox.Shared.Utilities" minOccurs="0" name="p_UserToken" nillable="true" type="q12:UserToken" />
+        <xs:element minOccurs="0" name="p_intUserUId" type="xs:int" />
+        <xs:element xmlns:q13="http://Tenrox.Server.Framework.DataContracts" minOccurs="0" name="p_timesheets" nillable="true" type="q13:Timesheets" />
+        <xs:element minOccurs="0" name="p_intTimesheetToTransition" type="xs:int" />
+        <xs:element minOccurs="0" name="p_intToTransition" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAndTransitionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://Tenrox.Server.Framework.DataContracts" minOccurs="0" name="SaveAndTransitionResult" nillable="true" type="q14:Timesheets" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryCompletedTimesheetsByUserTyped">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Tenrox.Shared.Utilities" minOccurs="0" name="p_UserToken" nillable="true" type="q15:UserToken" />
+        <xs:element minOccurs="0" name="p_dtStartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_dtEndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_intLastUniqueId" type="xs:int" />
+        <xs:element minOccurs="0" name="p_strAction" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strSearchBy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strSearchFor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_intMaxTimesheets" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryCompletedTimesheetsByUserTypedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://Tenrox.Server.Framework.DataContracts" minOccurs="0" name="QueryCompletedTimesheetsByUserTypedResult" nillable="true" type="q16:Timesheets" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryCompletedTimesheetsByUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_UserToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_dtStartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_dtEndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_intLastUniqueId" type="xs:int" />
+        <xs:element minOccurs="0" name="p_strAction" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strSearchBy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strSearchFor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_intMaxTimesheets" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryCompletedTimesheetsByUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueryCompletedTimesheetsByUserResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryTimesheetsDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_UserToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_intUserUId" type="xs:int" />
+        <xs:element minOccurs="0" name="p_dtStartDate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryTimesheetsDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueryTimesheetsDetailsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryTimesheetsDetailsTyped">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Tenrox.Shared.Utilities" minOccurs="0" name="p_UserToken" nillable="true" type="q17:UserToken" />
+        <xs:element minOccurs="0" name="p_intUserUId" type="xs:int" />
+        <xs:element minOccurs="0" name="p_dtStartDate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryTimesheetsDetailsTypedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://Tenrox.Server.Framework.DataContracts" minOccurs="0" name="QueryTimesheetsDetailsTypedResult" nillable="true" type="q18:Timesheets" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExecuteTransition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_UserToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_XmlCompletedTimesheet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strNote" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExecuteTransitionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ExecuteTransitionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExecuteTransitions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Tenrox.Shared.Utilities" minOccurs="0" name="p_UserToken" nillable="true" type="q19:UserToken" />
+        <xs:element minOccurs="0" name="p_XmlCompletedTimesheets" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExecuteTransitionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ExecuteTransitionsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExecuteTransitionsTyped">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Tenrox.Shared.Utilities" minOccurs="0" name="p_UserToken" nillable="true" type="q20:UserToken" />
+        <xs:element minOccurs="0" name="p_XmlCompletedTimesheets" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExecuteTransitionsTypedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://Tenrox.Server.Framework.DataContracts" minOccurs="0" name="ExecuteTransitionsTypedResult" nillable="true" type="q21:Timesheets" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
