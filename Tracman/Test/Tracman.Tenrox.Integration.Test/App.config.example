@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <appSettings>
+    <add key="TenroxUsername" value="example@intergen.org.nz" />
+    <add key="TenroxPassword" value="***REMOVED***" />
+  </appSettings>
+</configuration>

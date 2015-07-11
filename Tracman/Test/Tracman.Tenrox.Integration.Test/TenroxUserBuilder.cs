@@ -1,4 +1,5 @@
-﻿using Tracman.Core.Domain;
+﻿using Tracman.Core;
+using Tracman.Core.Domain;
 
 namespace Tracman.Tenrox.Integration.Test
 {
@@ -6,8 +7,8 @@ namespace Tracman.Tenrox.Integration.Test
     {
         public TenroxUserBuilder()
         {
-            Password = "***REMOVED***";
-            UserName = "***REMOVED***";
+            Password = Settings.Load("TenroxPassword").ToString();
+            UserName = Settings.Load("TenroxUsername").ToString();
         }
 
         public TenroxUser Build()
