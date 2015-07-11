@@ -25,9 +25,12 @@ namespace Tracman.Tenrox.Integration.Test
 
         private static DateTime ClosestSaturday()
         {
-            DateTime today = DateTime.Today;
-            int daysUntilTuesday = ((int) DayOfWeek.Saturday - (int) today.DayOfWeek + 7)%7;
-            return today.AddDays(daysUntilTuesday);
+            DateTime date = DateTime.Today;
+            while (date.DayOfWeek != DayOfWeek.Saturday)
+            {
+                date = date.AddDays(-1);
+            }
+            return date;
         }
     }
 }
