@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b3ee57b9-f7d1-4006-9fbd-17651159e606" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://intergen.tenrox.net/Twebservice/sdk/Assignments.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Assignments.xsd" MetadataType="Schema" ID="04d64886-ced3-4484-821a-a5b9c40e433d" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/sdk/Assignments.svc?xsd=xsd3" />
+    <MetadataFile FileName="Assignments1.xsd" MetadataType="Schema" ID="e4aaa9c0-fd48-44b3-b3a2-d731c9aabe5a" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/sdk/Assignments.svc?xsd=xsd6" />
+    <MetadataFile FileName="Assignments2.xsd" MetadataType="Schema" ID="28e153e7-d167-457b-8c98-a48b83f5d7ad" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/sdk/Assignments.svc?xsd=xsd4" />
+    <MetadataFile FileName="Assignments3.xsd" MetadataType="Schema" ID="3397669f-e128-42ec-aef6-7ea831fbbfbb" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/sdk/Assignments.svc?xsd=xsd1" />
+    <MetadataFile FileName="Assignments4.xsd" MetadataType="Schema" ID="bdc58c5e-78a3-4694-b620-774b942808d4" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/sdk/Assignments.svc?xsd=xsd5" />
+    <MetadataFile FileName="Assignments.wsdl" MetadataType="Wsdl" ID="1c5e3302-d5e9-4ebb-8c8a-e370c91a638a" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/sdk/Assignments.svc?wsdl" />
+    <MetadataFile FileName="Assignments5.xsd" MetadataType="Schema" ID="3339c6c9-d8ff-4c41-8d45-281af7a22270" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/sdk/Assignments.svc?xsd=xsd2" />
+    <MetadataFile FileName="Assignments6.xsd" MetadataType="Schema" ID="035ad926-21d4-4701-9da2-c1cca66b74d2" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/sdk/Assignments.svc?xsd=xsd7" />
+    <MetadataFile FileName="Assignments7.xsd" MetadataType="Schema" ID="c284ca91-7797-4426-ab2f-0519b44fda17" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/sdk/Assignments.svc?xsd=xsd0" />
+    <MetadataFile FileName="Assignments.disco" MetadataType="Disco" ID="99221f8d-d42d-40f5-93e2-3bc756c8a724" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/sdk/Assignments.svc?disco" />
+    <MetadataFile FileName="Assignments1.wsdl" MetadataType="Wsdl" ID="e8f6a49e-8c57-4551-a252-3380eb3704c7" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/sdk/Assignments.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -22,14 +22,19 @@ namespace Tracman.Tenrox.Integration
         public TimeSheet LoadCurrentTimesheet(TenroxUser tenroxUser)
         {
             TenroxIdentity token = _authenticator.Authenticate(tenroxUser);
-            BasicHttpBinding binding = new BasicHttpBinding(BasicHttpSecurityMode.Transport);
-            binding.MaxReceivedMessageSize = int.MaxValue;
-            using (TimesheetsClient client = new TimesheetsClient(binding, new EndpointAddress(_timesheetsEndpoint)))
+            using (TimesheetsClient client = BuildTimeSheetsClient())
             {
                 Timesheets timesheets = client.QueryByUserTyped(token.UserToken, token.UserId, DateTime.UtcNow.ToString("o"), 1, "", "");
                 Timesheet currentTimeSheet = timesheets.MyTimesheets.First();
                 return new TimeSheetBuilder(currentTimeSheet).Build();
             }
+        }
+
+        private TimesheetsClient BuildTimeSheetsClient()
+        {
+            BasicHttpBinding binding = new BasicHttpBinding(BasicHttpSecurityMode.Transport);
+            binding.MaxReceivedMessageSize = int.MaxValue;
+            return new TimesheetsClient(binding, new EndpointAddress(_timesheetsEndpoint));
         }
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Tracman.Core.Domain
 {
@@ -7,12 +8,15 @@ namespace Tracman.Core.Domain
         private readonly DateTime _startDate;
         private readonly DateTime _endDate;
         private readonly int _uniqueId;
+        private readonly IEnumerable<TimeSheetEntry> _entries;
 
-        public TimeSheet(DateTime startDate, DateTime endDate, int uniqueId)
+        public TimeSheet(DateTime startDate, DateTime endDate, int uniqueId, IEnumerable<TimeSheetEntry> entries)
         {
+            if (entries == null) throw new ArgumentNullException("entries");
             _startDate = startDate;
             _endDate = endDate;
             _uniqueId = uniqueId;
+            _entries = entries;
         }
 
         public DateTime StartDate
@@ -28,6 +32,11 @@ namespace Tracman.Core.Domain
         public int UniqueId
         {
             get { return _uniqueId; }
+        }
+
+        public IEnumerable<TimeSheetEntry> Entries
+        {
+            get { return _entries; }
         }
     }
 }

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="Tenrox.Application.SDK.ServiceContracts" elementFormDefault="qualified" targetNamespace="Tenrox.Application.SDK.ServiceContracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://intergen.tenrox.net/TWebService/sdk/Assignments.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Tenrox.Shared.Utilities" />
+  <xs:import schemaLocation="http://intergen.tenrox.net/TWebService/sdk/Assignments.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="QueryByAllSerialized">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryByAllSerializedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueryByAllSerializedResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryByUniqueIdSerialized">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_intUniqueId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryByUniqueIdSerializedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueryByUniqueIdSerializedResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryByIdSerialized">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryByIdSerializedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueryByIdSerializedResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryByNameSerialized">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryByNameSerializedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueryByNameSerializedResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSerialized">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_intUniqueId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSerializedResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Delete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Tenrox.Shared.Utilities" minOccurs="0" name="p_token" nillable="true" type="q1:UserToken" />
+        <xs:element minOccurs="0" name="p_intUniqueId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BulkDeleteSerialized">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strToken" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="p_intUniqueIds" nillable="true" type="q2:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BulkDeleteSerializedResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BulkDelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Tenrox.Shared.Utilities" minOccurs="0" name="p_token" nillable="true" type="q3:UserToken" />
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="p_intUniqueIds" nillable="true" type="q4:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BulkDeleteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
