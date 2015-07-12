@@ -45,7 +45,6 @@ $path = Resolve-Path .
 Include Scripts\Logger.ps1 -ErrorAction Stop
 Include Scripts\VisualStudioExtensions.ps1 -ErrorAction Stop
 Include Scripts\NUnitExtensions.ps1 -ErrorAction Stop
-Include Scripts\SystemExtensions.ps1 -ErrorAction Stop
 
 #-------------
 #Build Targets
