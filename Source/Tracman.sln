@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tracman", "Tracman\Tracman.csproj", "{3FFEA48A-4FA2-4D07-A6C1-0EC746D37289}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tracman.Tenrox.Integration", "Tracman.Tenrox.Integration\Tracman.Tenrox.Integration.csproj", "{15320E1C-E93D-4B50-9E92-4B4B16C78C09}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{97D67D54-44CC-4DF1-B271-33B9D21238C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tracman.Tenrox.Integration.Test", "Test\Tracman.Tenrox.Integration.Test\Tracman.Tenrox.Integration.Test.csproj", "{5CF0CE64-9567-49F0-B710-F6B1D25B1DCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tracman.Core", "Tracman.Core\Tracman.Core.csproj", "{D09DA497-634E-440D-B75E-6DC1008CC758}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{454A38B7-56E4-41FC-B7E8-F7E4ECC0323A}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3FFEA48A-4FA2-4D07-A6C1-0EC746D37289}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FFEA48A-4FA2-4D07-A6C1-0EC746D37289}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FFEA48A-4FA2-4D07-A6C1-0EC746D37289}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FFEA48A-4FA2-4D07-A6C1-0EC746D37289}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15320E1C-E93D-4B50-9E92-4B4B16C78C09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15320E1C-E93D-4B50-9E92-4B4B16C78C09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15320E1C-E93D-4B50-9E92-4B4B16C78C09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15320E1C-E93D-4B50-9E92-4B4B16C78C09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CF0CE64-9567-49F0-B710-F6B1D25B1DCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CF0CE64-9567-49F0-B710-F6B1D25B1DCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CF0CE64-9567-49F0-B710-F6B1D25B1DCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CF0CE64-9567-49F0-B710-F6B1D25B1DCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D09DA497-634E-440D-B75E-6DC1008CC758}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D09DA497-634E-440D-B75E-6DC1008CC758}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D09DA497-634E-440D-B75E-6DC1008CC758}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D09DA497-634E-440D-B75E-6DC1008CC758}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5CF0CE64-9567-49F0-B710-F6B1D25B1DCB} = {97D67D54-44CC-4DF1-B271-33B9D21238C7}
+	EndGlobalSection
+EndGlobal
