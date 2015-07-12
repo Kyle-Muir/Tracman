@@ -11,7 +11,7 @@
 
         public TenroxClientResolver Build()
         {
-            return new TenroxClientResolver(_tenroxIdentityCache, TenroxConstants.AssignmentsServiceUri);
+            return new TenroxClientResolver(_tenroxIdentityCache, TenroxConstants.ClientsServiceUri);
         }
     }
 }

@@ -51,6 +51,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\ClientsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="TenroxClientResolver.cs" />
     <Compile Include="ITenroxAuthenticator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -129,6 +134,62 @@
     <None Include="Service References\AssignmentsService\Tracman.Tenrox.Integration.AssignmentsService.QueryByUniqueIdSerializedResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\ClientsService\Clients.wsdl" />
+    <None Include="Service References\ClientsService\Clients.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ClientsService\Clients1.wsdl" />
+    <None Include="Service References\ClientsService\Clients1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ClientsService\Clients2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ClientsService\Clients3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ClientsService\Clients4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ClientsService\Clients5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ClientsService\Clients6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ClientsService\Clients7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ClientsService\Tracman.Tenrox.Integration.ClientsService.BulkDeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ClientsService\Tracman.Tenrox.Integration.ClientsService.BulkDeleteSerializedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ClientsService\Tracman.Tenrox.Integration.ClientsService.Client.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ClientsService\Tracman.Tenrox.Integration.ClientsService.ClientInvoiceOption.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ClientsService\Tracman.Tenrox.Integration.ClientsService.DeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ClientsService\Tracman.Tenrox.Integration.ClientsService.DeleteSerializedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ClientsService\Tracman.Tenrox.Integration.ClientsService.QueryByAllSerializedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ClientsService\Tracman.Tenrox.Integration.ClientsService.QueryByIdSerializedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ClientsService\Tracman.Tenrox.Integration.ClientsService.QueryByNameSerializedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ClientsService\Tracman.Tenrox.Integration.ClientsService.QueryByUniqueIdSerializedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\TenroxLogonService\LogonAs.wsdl" />
     <None Include="Service References\TenroxLogonService\LogonAs.xsd">
       <SubType>Designer</SubType>
@@ -175,6 +236,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\AssignmentsService\" />
+    <WCFMetadataStorage Include="Service References\ClientsService\" />
     <WCFMetadataStorage Include="Service References\TenroxLogonService\" />
     <WCFMetadataStorage Include="Service References\TimesheetsService\" />
   </ItemGroup>
@@ -219,6 +281,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\AssignmentsService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ClientsService\Clients.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ClientsService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ClientsService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ClientsService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

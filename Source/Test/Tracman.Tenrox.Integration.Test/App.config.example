@@ -2,6 +2,6 @@
 <configuration>
   <appSettings>
     <add key="TenroxUsername" value="example@intergen.org.nz" />
-    <add key="TenroxPassword" value="***REMOVED***" />
+    <add key="TenroxPassword" value="password1" />
   </appSettings>
 </configuration>

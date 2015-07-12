@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bf937fc2-35e8-4038-83f0-4efa0bfbab51" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://intergen.tenrox.net/Twebservice/sdk/Clients.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Clients.xsd" MetadataType="Schema" ID="2f999abc-e279-43bf-b8b8-d1810970ef95" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/sdk/Clients.svc?xsd=xsd1" />
+    <MetadataFile FileName="Clients1.xsd" MetadataType="Schema" ID="8a43c05d-68f4-4820-8e93-e4cc95fd22f6" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/sdk/Clients.svc?xsd=xsd5" />
+    <MetadataFile FileName="Clients2.xsd" MetadataType="Schema" ID="76ffaf74-8c89-4149-9231-2fe55433d981" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/sdk/Clients.svc?xsd=xsd6" />
+    <MetadataFile FileName="Clients.wsdl" MetadataType="Wsdl" ID="39a97cd9-3493-43cf-994d-b3f988a39499" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/sdk/Clients.svc?wsdl" />
+    <MetadataFile FileName="Clients3.xsd" MetadataType="Schema" ID="df26fe5d-6cfb-4d8c-b5fd-1159fa9c2558" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/sdk/Clients.svc?xsd=xsd2" />
+    <MetadataFile FileName="Clients4.xsd" MetadataType="Schema" ID="1b5a0466-e578-4b71-ba3a-b5060abb9b32" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/sdk/Clients.svc?xsd=xsd7" />
+    <MetadataFile FileName="Clients5.xsd" MetadataType="Schema" ID="1b58166c-5ef4-47a7-a6b6-63ba9f9da2fe" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/sdk/Clients.svc?xsd=xsd3" />
+    <MetadataFile FileName="Clients6.xsd" MetadataType="Schema" ID="f957f4e9-0af3-4407-8a8e-92cf37eab464" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/sdk/Clients.svc?xsd=xsd4" />
+    <MetadataFile FileName="Clients.disco" MetadataType="Disco" ID="a5b44097-64ed-42d8-b6b0-87623dc5c373" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/sdk/Clients.svc?disco" />
+    <MetadataFile FileName="Clients7.xsd" MetadataType="Schema" ID="05dd9d15-c8e1-473e-b9b8-04f186bc1bad" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/sdk/Clients.svc?xsd=xsd0" />
+    <MetadataFile FileName="Clients1.wsdl" MetadataType="Wsdl" ID="b50b521d-f10f-4430-85b1-1a39349b3476" SourceId="1" SourceUrl="https://intergen.tenrox.net/TWebService/sdk/Clients.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

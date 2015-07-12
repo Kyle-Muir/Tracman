@@ -3,7 +3,8 @@ using System.Globalization;
 using System.Linq;
 using System.ServiceModel;
 using Tracman.Core.Domain;
-using Tracman.Tenrox.Integration.AssignmentsService;
+using Tracman.Tenrox.Integration.ClientsService;
+using Client = Tracman.Tenrox.Integration.ClientsService.Client;
 
 namespace Tracman.Tenrox.Integration
 {
@@ -23,10 +24,13 @@ namespace Tracman.Tenrox.Integration
         public string Resolve(int clientUniqueId)
         {
             TenroxIdentity identity = _tenroxIdentityCache.LoadExistingIdentity();
-            using (AssignmentsClient client = new AssignmentsClient(new BasicHttpBinding(BasicHttpSecurityMode.Transport), new EndpointAddress(_webServiceEndpoint)))
+            BasicHttpBinding basicHttpBinding = new BasicHttpBinding(BasicHttpSecurityMode.Transport);
+            basicHttpBinding.MaxReceivedMessageSize = int.MaxValue;
+            using (ClientsClient client = new ClientsClient(basicHttpBinding, new EndpointAddress(_webServiceEndpoint)))
             {
-                Assignment[] assignments = client.QueryById(identity.UserToken, clientUniqueId.ToString(CultureInfo.CurrentCulture));
-                return assignments.First().Name;
+                var clients = client.QueryByAll(identity.UserToken);
+                Client whatIAmLookingFor = clients.First(c => c.Name == "Intergen Business Solutions Pty (for Intergen NZ)");
+                return whatIAmLookingFor.Name;
             }
         }
     }
