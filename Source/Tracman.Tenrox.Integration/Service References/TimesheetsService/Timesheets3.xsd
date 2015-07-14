@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="Tenrox.Server.Framework.Business.ServiceContracts" elementFormDefault="qualified" targetNamespace="Tenrox.Server.Framework.Business.ServiceContracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://intergen.tenrox.net/TWebService/Timesheets.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Tenrox.Shared.Utilities" />
-  <xs:import schemaLocation="http://intergen.tenrox.net/TWebService/Timesheets.svc?xsd=xsd3" namespace="http://Tenrox.Server.Framework.DataContracts" />
+  <xs:import schemaLocation="http://intergenimpl.tenrox.net/TWebService/Timesheets.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Tenrox.Shared.Utilities" />
+  <xs:import schemaLocation="http://intergenimpl.tenrox.net/TWebService/Timesheets.svc?xsd=xsd3" namespace="http://Tenrox.Server.Framework.DataContracts" />
   <xs:element name="QueryByUser">
     <xs:complexType>
       <xs:sequence>

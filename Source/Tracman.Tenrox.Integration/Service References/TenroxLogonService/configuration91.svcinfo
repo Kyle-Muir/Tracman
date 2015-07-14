@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_ILogonAs" contract="TenroxLogonService.ILogonAs" bindingType="basicHttpBinding" address="http://intergen.tenrox.net/TWebService/LogonAs.svc" bindingConfiguration="BasicHttpBinding_ILogonAs">
+    <endpoint name="BasicHttpBinding_ILogonAs" contract="TenroxLogonService.ILogonAs" bindingType="basicHttpBinding" address="http://intergenimpl.tenrox.net/TWebService/LogonAs.svc" bindingConfiguration="BasicHttpBinding_ILogonAs">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://intergen.tenrox.net/TWebService/LogonAs.svc</serializedValue>
+          <serializedValue>http://intergenimpl.tenrox.net/TWebService/LogonAs.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

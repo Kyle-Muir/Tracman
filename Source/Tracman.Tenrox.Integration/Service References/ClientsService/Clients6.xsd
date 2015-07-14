@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="Tenrox.Application.SDK" elementFormDefault="qualified" targetNamespace="Tenrox.Application.SDK" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://intergen.tenrox.net/TWebService/sdk/Clients.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Tenrox.Shared.Utilities" />
-  <xs:import schemaLocation="http://intergen.tenrox.net/TWebService/sdk/Clients.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Tenrox.Application.SDK" />
+  <xs:import schemaLocation="http://intergenimpl.tenrox.net/TWebService/sdk/Clients.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Tenrox.Shared.Utilities" />
+  <xs:import schemaLocation="http://intergenimpl.tenrox.net/TWebService/sdk/Clients.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Tenrox.Application.SDK" />
   <xs:element name="QueryByAll">
     <xs:complexType>
       <xs:sequence>

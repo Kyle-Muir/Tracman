@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IClients" contract="ClientsService.IClients" bindingType="basicHttpBinding" address="http://intergen.tenrox.net/TWebService/sdk/Clients.svc" bindingConfiguration="BasicHttpBinding_IClients">
+    <endpoint name="BasicHttpBinding_IClients" contract="ClientsService.IClients" bindingType="basicHttpBinding" address="http://intergenimpl.tenrox.net/TWebService/sdk/Clients.svc" bindingConfiguration="BasicHttpBinding_IClients">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://intergen.tenrox.net/TWebService/sdk/Clients.svc</serializedValue>
+          <serializedValue>http://intergenimpl.tenrox.net/TWebService/sdk/Clients.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

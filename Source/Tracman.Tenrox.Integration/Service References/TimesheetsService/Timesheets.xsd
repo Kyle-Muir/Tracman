@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://Tenrox.Server.Framework.DataContracts" elementFormDefault="qualified" targetNamespace="http://Tenrox.Server.Framework.DataContracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://intergen.tenrox.net/TWebService/Timesheets.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Tenrox.Server.Framework.Business.BusinessCore" />
+  <xs:import schemaLocation="http://intergenimpl.tenrox.net/TWebService/Timesheets.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Tenrox.Server.Framework.Business.BusinessCore" />
   <xs:complexType name="Timesheets">
     <xs:sequence>
       <xs:element minOccurs="0" name="MyCompletedTimesheets" nillable="true" type="tns:ArrayOfCompletedTimesheet" />
