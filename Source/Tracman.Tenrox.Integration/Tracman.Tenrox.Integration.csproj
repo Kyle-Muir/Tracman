@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AvailableTaskBuilder.cs" />
     <Compile Include="ITenroxClientRepository.cs" />
     <Compile Include="ITenroxIdentityCache.cs" />
     <Compile Include="ITracmanCache.cs" />

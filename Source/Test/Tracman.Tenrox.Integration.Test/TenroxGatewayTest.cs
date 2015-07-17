@@ -24,6 +24,7 @@ namespace Tracman.Tenrox.Integration.Test
             timeSheet.EndDate.Should().Be(endOfWeek);
             timeSheet.UniqueId.Should().BePositive();
             timeSheet.Entries.Count().Should().BeGreaterThan(0, "should have entries for a week...");
+            timeSheet.AvailableTasks.Count().Should().BeGreaterThan(0, "should have some tasks that can be assigned");
         }
 
         private static DateTime ClosestSaturday()

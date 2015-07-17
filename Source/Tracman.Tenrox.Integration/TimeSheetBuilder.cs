@@ -21,7 +21,9 @@ namespace Tracman.Tenrox.Integration
             DateTime startDate = DateTime.ParseExact(_timesheet.StartDate, "M/dd/yyyy", CultureInfo.InvariantCulture);
             DateTime endDate = DateTime.ParseExact(_timesheet.EndDate, "M/dd/yyyy", CultureInfo.InvariantCulture);
             IEnumerable<TimeSheetEntry> entries = new TimeSheetEntryBuilder(_timesheet.TimesheetEntries).Build();
-            return new TimeSheet(startDate, endDate, _timesheet.UniqueId, entries);
+            IEnumerable<AvailableTask> availableTasks = new AvailableTaskBuilder(_timesheet.TimesheetAssignmentAttributes).Build();
+            
+            return new TimeSheet(startDate, endDate, _timesheet.UniqueId, entries, availableTasks);
         }
     }
 }

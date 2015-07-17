@@ -43,7 +43,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\AvailableTask.cs" />
+    <Compile Include="Domain\TenroxClient.cs" />
     <Compile Include="Domain\TenroxIdentity.cs" />
+    <Compile Include="Domain\TenroxTask.cs" />
     <Compile Include="Domain\TenroxUser.cs" />
     <Compile Include="Domain\TimeSheet.cs" />
     <Compile Include="Domain\TimeSheetEntry.cs" />
