@@ -27,7 +27,10 @@ namespace Tracman.Tenrox.Integration
             string concatNotes = entry.TimeEntryNotes.Aggregate(string.Empty, (current, notes) => current + notes.Description);
             int totalTimeInSeconds = entry.TotalTime;
             decimal totalTimeInHours = totalTimeInSeconds / 3600;
-            return new TimeSheetEntry(entry.AssignmentAttributeUid.ToString(), entry.TaskUid.ToString(), DateTime.ParseExact(entry.EntryDate, "M/dd/yyyy", CultureInfo.InvariantCulture), totalTimeInHours, concatNotes);
+            return new TimeSheetEntry(entry.AssignmentAttributeUid.ToString(CultureInfo.InvariantCulture),
+                entry.TaskUid.ToString(CultureInfo.InvariantCulture),
+                DateTime.ParseExact(entry.EntryDate, "M/dd/yyyy", CultureInfo.InvariantCulture), totalTimeInHours,
+                concatNotes);
         }
     }
 }

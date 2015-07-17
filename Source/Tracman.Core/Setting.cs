@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Globalization;
 
 namespace Tracman.Core
 {
@@ -34,8 +33,7 @@ namespace Tracman.Core
             {
                 return intValue;
             }
-            string error = string.Format(CultureInfo.CurrentCulture, "The configuration setting '{0}' with value '{1}' cannot be converted to an int",
-                Key, Value);
+            string error = "The configuration setting '{0}' with value '{1}' cannot be converted to an int".FormatWith(Key, Value);
             throw new InvalidOperationException(error);
         }
 
@@ -46,8 +44,7 @@ namespace Tracman.Core
             {
                 return decimalValue;
             }
-            string error = string.Format(CultureInfo.CurrentCulture, "The configuration setting '{0}' with value '{1}' cannot be converted to a decimal",
-                Key, Value);
+            string error = "The configuration setting '{0}' with value '{1}' cannot be converted to a decimal".FormatWith(Key, Value);
             throw new InvalidOperationException(error);
         }
 
@@ -59,8 +56,7 @@ namespace Tracman.Core
                 return enumValue;
             }
 
-            string error = string.Format(CultureInfo.CurrentCulture, "The configuration setting '{0}' with value '{1}' cannot be converted to an enum of type {2}",
-                Key, Value, typeof(T));
+            string error = "The configuration setting '{0}' with value '{1}' cannot be converted to an enum of type {2}".FormatWith(Key, Value, typeof(T));
             throw new InvalidOperationException(error);
         }
 
@@ -77,7 +73,9 @@ namespace Tracman.Core
                 return outValue;
             }
 
-            string error = string.Format(CultureInfo.CurrentCulture, "The configuration setting '{0}' with value '{1}' cannot be converted to boolean value", Key, Value);
+            string error =
+                "The configuration setting '{0}' with value '{1}' cannot be converted to boolean value".FormatWith(Key,
+                    Value);
             throw new InvalidOperationException(error);
         }
 
@@ -88,8 +86,7 @@ namespace Tracman.Core
             {
                 return guidValue;
             }
-            string error = string.Format(CultureInfo.CurrentCulture, "The configuration setting '{0}' with value '{1}' cannot be converted to a Guid",
-                Key, Value);
+            string error = "The configuration setting '{0}' with value '{1}' cannot be converted to a Guid".FormatWith(Key, Value);
             throw new InvalidOperationException(error);
         }
     }

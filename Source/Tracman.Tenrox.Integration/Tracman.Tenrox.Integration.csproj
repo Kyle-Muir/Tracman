@@ -45,7 +45,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ITenroxClientRepository.cs" />
     <Compile Include="ITenroxIdentityCache.cs" />
+    <Compile Include="ITracmanCache.cs" />
     <Compile Include="Service References\AssignmentsService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -56,6 +58,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="TenroxClientRepository.cs" />
     <Compile Include="TenroxClientResolver.cs" />
     <Compile Include="ITenroxAuthenticator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,6 +77,7 @@
     <Compile Include="TenroxIdentityCache.cs" />
     <Compile Include="TimeSheetBuilder.cs" />
     <Compile Include="TimeSheetEntryBuilder.cs" />
+    <Compile Include="TracmanCache.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

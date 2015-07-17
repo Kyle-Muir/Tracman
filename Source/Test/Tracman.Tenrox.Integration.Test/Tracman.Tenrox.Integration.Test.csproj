@@ -55,6 +55,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TenroxAuthenticatorBuilder.cs" />
     <Compile Include="TenroxAuthenticatorTests.cs" />
+    <Compile Include="TenroxClientRepositoryBuilder.cs" />
     <Compile Include="TenroxClientResolverBuilder.cs" />
     <Compile Include="TenroxClientResolverTest.cs" />
     <Compile Include="TenroxConstants.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="TenroxIdentityCacheBuilder.cs" />
     <Compile Include="TenroxUserBuilder.cs" />
     <Compile Include="TenroxUserDependantTest.cs" />
+    <Compile Include="TracmanCacheBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

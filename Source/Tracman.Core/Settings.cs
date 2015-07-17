@@ -13,7 +13,7 @@ namespace Tracman.Core
             }
             catch (Exception error)
             {
-                throw new ConfigurationErrorsException(string.Format("App Setting with name {0} was not defined", key), error);
+                throw new ConfigurationErrorsException("App Setting with name {0} was not defined".FormatWith(key), error);
             }
         }
     }
